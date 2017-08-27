@@ -98,6 +98,7 @@ public class ChooseAreaFragment extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 if (mCurrentLevel == LEVEL_PROVINCE) {
                     mSelectedProvince = mProvinceList.get(position);
                     queryCities();
@@ -174,7 +175,7 @@ public class ChooseAreaFragment extends Fragment {
     private void queryCities() {
         mTitleText.setText(mSelectedProvince.getProvinceName());
         mBackButton.setVisibility(View.VISIBLE);
-        LogUtils.d(TAG, String.valueOf(mSelectedProvince.getId()));
+        
         mCityList = DataSupport.where("provinceid = ?", String.valueOf(mSelectedProvince.getId())).find(City.class);
         if (mCityList.size() > 0) {
             mDataList.clear();

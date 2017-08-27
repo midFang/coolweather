@@ -4,19 +4,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-
 import db.City;
-import db.Country;
+import db.County;
 import db.Province;
 
-import android.R.bool;
 import android.text.TextUtils;
 
 public class Utility {
 	/**
-	 * ´¦Àí·şÎñÆ÷·µ»ØµÄÊ¡¼¶µÄÊı¾İ
+	 * å¤„ç†æœåŠ¡å™¨è¿”å›çš„çœçº§çš„æ•°æ®
 	 */
 	public static boolean handlerProvinceResponse(String response){
 		if (!TextUtils.isEmpty(response)) {
@@ -38,9 +34,9 @@ public class Utility {
 	}
 	
 	/**
-	 * ´¦Àí·şÎñÆ÷·µ»ØµÄÊĞ¼¶µÄÊı¾İ
+	 * å¤„ç†æœåŠ¡å™¨è¿”å›çš„å¸‚çº§çš„æ•°æ®
 	 */
-	public static boolean handlerCityResponse(String response){
+	public static boolean handlerCityResponse(String response,int provincedId){
 		if (!TextUtils.isEmpty(response)) {
 			try {
 				JSONArray allCities = new JSONArray(response);
@@ -49,8 +45,8 @@ public class Utility {
 					City city = new City();
 					city.setCityCode(cityObject.getInt("id"));
 					city.setCityName(cityObject.getString("name"));
-					// Ê¡¼¶µÄidÔÚÕâÀïÉèÖÃ
-					city.setProvince(cityObject.getInt("id"));
+					// çœçº§çš„idåœ¨è¿™é‡Œè®¾ç½®
+					city.setProvinceId(provincedId);
 					city.save();
 				}
 				return true;
@@ -62,19 +58,19 @@ public class Utility {
 	}
 	
 	/**
-	 * ´¦Àí·şÎñÆ÷·µ»ØµÄÏØ¼¶µÄÊı¾İ
+	 * å¤„ç†æœåŠ¡å™¨è¿”å›çš„å¿çº§çš„æ•°æ®
 	 */
-	public static boolean handlerCountryResponse(String response){
+	public static boolean handlerCountyResponse(String response, int cityId){
 		if (!TextUtils.isEmpty(response)) {
 			try {
 				JSONArray allcountries = new JSONArray(response);
 				for (int i = 0; i < allcountries.length(); i++) {
 					JSONObject countryObject = allcountries.getJSONObject(i);
-					Country country = new Country();
-					country.setCityId(countryObject.getInt("id"));
-					country.setCountryName(countryObject.getString("name"));
-					country.setWeatherId(countryObject.getString("weather_id"));
-					country.save();
+					County county = new County();
+					county.setCityId(cityId);
+					county.setCountyName(countryObject.getString("name"));
+					county.setWeatherId(countryObject.getString("weather_id"));
+					county.save();
 				}
 				return true;
 			} catch (JSONException e) {

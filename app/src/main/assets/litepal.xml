@@ -6,9 +6,9 @@
     <version value="1" />
 
     <list>
-		<mapping class="com.example.coolw.db.City" />
-		<mapping class="com.example.coolw.db.Country" />
-		<mapping class="com.example.coolw.db.Province" />
+		<mapping class="android.lookweather.com.lookweather.db.City" />
+		<mapping class="android.lookweather.com.lookweather.db.County" />
+		<mapping class="android.lookweather.com.lookweather.db.Province" />
     </list>
 
 </litepal>

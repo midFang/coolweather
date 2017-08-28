@@ -7,6 +7,8 @@ import org.json.JSONObject;
 import com.android.lookweather.db.City;
 import com.android.lookweather.db.County;
 import com.android.lookweather.db.Province;
+import com.android.lookweather.json.Weather;
+import com.google.gson.Gson;
 
 import android.text.TextUtils;
 
@@ -78,6 +80,23 @@ public class Utility {
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * 将json返回的数据解析成weather实体类
+	 */
+	public static Weather handleWeatherResponse(String response) {
+		try {
+			JSONObject jsonObject = new JSONObject(response);
+			JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+			String weatherContent = jsonArray.getJSONObject(0).toString();
+			return new Gson().fromJson(weatherContent, Weather.class);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 }

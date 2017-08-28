@@ -1,12 +1,12 @@
-package utils;
+package com.android.lookweather.utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import db.City;
-import db.County;
-import db.Province;
+import com.android.lookweather.db.City;
+import com.android.lookweather.db.County;
+import com.android.lookweather.db.Province;
 
 import android.text.TextUtils;
 

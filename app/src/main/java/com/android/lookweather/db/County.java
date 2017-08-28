@@ -1,4 +1,4 @@
-package db;
+package com.android.lookweather.db;
 
 import org.litepal.crud.DataSupport;
 

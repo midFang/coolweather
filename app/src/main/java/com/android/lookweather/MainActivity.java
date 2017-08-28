@@ -1,4 +1,4 @@
-package android.lookweather.com.lookweather;
+package com.android.lookweather;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

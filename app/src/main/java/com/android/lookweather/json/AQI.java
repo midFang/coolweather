@@ -1,4 +1,4 @@
-package json;
+package com.android.lookweather.json;
 
 /**
  * Created by fangsf on 2017/8/27.

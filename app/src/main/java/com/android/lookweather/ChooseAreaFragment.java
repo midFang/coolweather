@@ -1,7 +1,6 @@
-package android.lookweather.com.lookweather;
+package com.android.lookweather;
 
 import android.app.ProgressDialog;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,22 +15,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.litepal.crud.DataSupport;
-import org.litepal.util.LogUtil;
 
 import java.io.IOException;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import db.City;
-import db.County;
-import db.Province;
+import com.android.lookweather.db.City;
+import com.android.lookweather.db.County;
+import com.android.lookweather.db.Province;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
-import utils.HttpUtil;
-import utils.LogUtils;
-import utils.Utility;
+import com.android.lookweather.utils.HttpUtil;
+import com.android.lookweather.utils.LogUtils;
+import com.android.lookweather.utils.Utility;
 
 /**
  * Created by fangsf on 2017/8/25.

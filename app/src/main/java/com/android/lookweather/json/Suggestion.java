@@ -1,4 +1,4 @@
-package json;
+package com.android.lookweather.json;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package utils;
+package com.android.lookweather.utils;
 
 import android.util.Log;
 

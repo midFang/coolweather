@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="android.lookweather.com.lookweather.WeatherActivity">
+    tools:context="android.lookweather.com.lookweather.com.lookweather.com.lookweather.WeatherActivity">
 
     <ScrollView
         android:id="@+id/weather_layout"

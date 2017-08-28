@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="android.lookweather.com.lookweather.MainActivity">
+    tools:context="android.lookweather.com.lookweather.com.lookweather.com.lookweather.MainActivity">
 
     <fragment
         android:layout_width="match_parent"
         android:id="@+id/choose_area_fragment"
-        android:name="android.lookweather.com.lookweather.ChooseAreaFragment"
+        android:name="com.android.lookweather.ChooseAreaFragment"
         android:layout_height="match_parent"/>
     
 </FrameLayout>

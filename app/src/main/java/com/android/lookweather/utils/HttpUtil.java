@@ -1,4 +1,4 @@
-package utils;
+package com.android.lookweather.utils;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

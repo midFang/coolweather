@@ -7,6 +7,12 @@
     android:background="@color/colorPrimary"
    >
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/bing_pic_img"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"/>
+    
     <ScrollView
         android:id="@+id/weather_layout"
         android:layout_width="match_parent"

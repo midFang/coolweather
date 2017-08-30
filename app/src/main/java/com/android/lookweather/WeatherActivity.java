@@ -45,20 +45,22 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
-        initView();
+        //要在setContentView 之前设置属性
         if (Build.VERSION.SDK_INT >= 21) {
             View decorView = getWindow().getDecorView();
             decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN |
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
+        setContentView(R.layout.activity_weather);
+        initView();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String weatherString = prefs.getString("weather", null);
         if (weatherString != null) {
             //cache load
             Weather weather = Utility.handleWeatherResponse(weatherString);
+            showWeatherInfo(weather);
         } else {
             //server search
             String weatherId = getIntent().getStringExtra("weather_id");

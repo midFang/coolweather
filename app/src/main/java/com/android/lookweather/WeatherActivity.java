@@ -1,5 +1,6 @@
 package com.android.lookweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 
 import com.android.lookweather.json.Forecast;
 import com.android.lookweather.json.Weather;
+import com.android.lookweather.service.AutoUpdateService;
 import com.android.lookweather.utils.HttpUtil;
 import com.android.lookweather.utils.LogUtils;
 import com.android.lookweather.utils.Utility;
@@ -215,6 +217,10 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+
+        // 自动更新天气
+        Intent intent = new Intent(WeatherActivity.this, AutoUpdateService.class);
+        startService(intent);
     }
 
     private void initView() {

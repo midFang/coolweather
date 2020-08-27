@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LookWeather.iml" filepath="$PROJECT_DIR$/LookWeather.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coolweather.iml" filepath="$PROJECT_DIR$/.idea/modules/coolweather.iml" group="coolweather" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/coolweather-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/coolweather-app.iml" group="coolweather/app" />
     </modules>
   </component>
 </project>

@@ -12,6 +12,8 @@ class SunnyWeatherApplication : Application() {
     companion object {
         // 全局提供 context 方式
         lateinit var context: Context
+
+        const val TOKEN = ""
     }
 
     override fun onCreate() {

@@ -1,6 +1,7 @@
 package com.android.lookweather.logic.network
 
 import android.app.DownloadManager
+import com.android.lookweather.logic.model.PlaceResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,7 +32,6 @@ object SunnyWeatherNetWork {
     suspend fun searchPlaces(query: String) = placeService.searchPlaces(query).await()
 
 
-
     // 进行了重写
     private suspend fun <T> Call<T>.await(): T {
         // suspendCoroutine 有什么特点,和区别
@@ -52,6 +52,5 @@ object SunnyWeatherNetWork {
             })
         }
     }
-
 
 }

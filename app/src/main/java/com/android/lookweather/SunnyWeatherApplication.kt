@@ -13,6 +13,7 @@ class SunnyWeatherApplication : Application() {
         // 全局提供 context 方式
         lateinit var context: Context
 
+        // todo 测试需要填写 token 值
         const val TOKEN = ""
     }
 

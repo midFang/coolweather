@@ -15,6 +15,7 @@ import com.android.lookweather.MainActivity
 import com.android.lookweather.R
 import com.android.lookweather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.fragment_place.*
+import kotlinx.coroutines.withContext
 
 /**
  * Created by midFang on 2020/9/4

@@ -16,7 +16,6 @@ object ServiceCreator {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-
     fun <T> create(serviceClass: Class<T>): T = retrofit.create(serviceClass)
 
 
